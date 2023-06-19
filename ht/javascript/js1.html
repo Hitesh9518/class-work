@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function add(){
+            
+            var a = parseInt(document.getElementById("text1").value);
+            var b = parseInt(document.getElementById("text2").value);
+
+            // var a = parseFloat(document.getElementById("text1").value);
+            // var b = parseFloat(document.getElementById("text2").value);
+
+            // var c = a+b;
+            // console.log(a);
+            // console.log(b);
+            console.log(c);
+            document.getElementById("ans").innerHTML = c;
+        }
+        function sub(){
+            
+            var a = parseInt(document.getElementById("text1").value);
+            var b = parseInt(document.getElementById("text2").value);
+
+            var c = a-b;
+            // console.log(a);
+            // console.log(b);
+            console.log(c);
+            document.getElementById("ans").innerHTML = c;
+        }
+        function mul(){
+            
+            var a = parseInt(document.getElementById("text1").value);
+            var b = parseInt(document.getElementById("text2").value);
+
+            var c = a*b;
+            // console.log(a);
+            // console.log(b);
+            console.log(c);
+            document.getElementById("ans").innerHTML = c;
+        }
+        function div(){
+            
+            var a = parseInt(document.getElementById("text1").value);
+            var b = parseInt(document.getElementById("text2").value);
+
+            var c = a/b;
+            // console.log(a);
+            // console.log(b);
+            console.log(c);
+            document.getElementById("ans").innerHTML = c;
+        }
+
+        function eq1(){
+            var a = parseInt(document.getElementById("text1").value);
+            var b = parseInt(document.getElementById("text2").value);
+
+            // var c = (a*a)+(b*b);
+
+            // var c = (a * a)+(2 * a * b)+(b * b);
+
+            // var l = 3; var c = l * l * l;
+
+            // var l = 4; var c = l * l;
+
+            var pi = 3.14; var r = 2; var h = 4;
+            
+            // var c = 2 * pi * r * h;
+            var c = 2 * pi * (r * r);
+            
+            document.getElementById("ans").innerHTML = c;
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="text1">
+        <input type="text" id="text2">
+        <button type="submit" onclick="add()" name="add">Addition</button>
+        <button type="submit" onclick="sub()" name="sub">Subtraction</button>
+        <button type="submit" onclick="mul()" name="mul">Multiplication</button>
+        <button type="submit" onclick="div()" name="div">Division</button>
+        <button type="submit" onclick="eq1()" name="eq1">Equation</button>
+
+        <div id="ans"></div>
+    </div>
+</body>
+
+</html>

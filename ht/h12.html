@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nav {
+            background-color: gray;
+            height: 50px;
+            margin: 0;
+        }
+
+        a {
+            font-size: 20px;
+            margin: 10px;
+            padding: 4px;
+            /* background-color: black; */
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            font-size: 20px;
+            margin: 10px;
+            padding: 4px;
+            color: black;
+            background-color: white;
+            /* height:30px; */
+            padding: 4px;
+            transition: 0.8s;
+        }
+
+        #search {
+            font-size: 15px;
+            margin-left: 750px;
+        }
+
+        #chat_box {
+            margin-top: 10px;
+            width: 1335px;
+            height: 700px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)), url('img1.png');
+            background-repeat: no-repeat;
+            /* position: fixed; */
+            align-items: center;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        /* #chat_box .main1{
+            
+        } */
+
+        .main1 h1 {
+            color: orange;
+            margin-top: 300px;
+            margin-bottom: 10px;
+            font-size: 50px;
+        }
+
+        .main1 .btn {
+            padding-top: 8px;
+            text-align: center;
+            width: 150px;
+            height: 30px;
+            position: relative;
+            left: 10%;
+            color: whitesmoke;
+            background-color: black;
+            /* border-radius: 10px; */
+            margin-bottom: 300px;
+            margin-top: 0px;
+        }
+
+        .main1 .btn:hover {
+            /* align-items: center; */
+            color: black;
+            background-color: whitesmoke;
+            transition: 0.8;
+            /* border-radius: 10px; */
+            margin-bottom: 300px;
+            margin-top: 0px;
+        }
+
+        #box {
+            margin-bottom: 60px;
+            height: 300px;
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin-left: 1120px;
+            position: fixed;
+            background-color: gray;
+            /* display: none; */
+        }
+
+        #chat_inp {
+            font-size: 15px;
+            margin-top: 130%;
+            /* margin-left: 10px; */
+        }
+
+        .main2 {
+            margin: 20px 0;
+            width: 1335px;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 20px;
+            background-color: whitesmoke;
+        }
+
+        .main2 #card1 {
+            width: 350px;
+            height: 400px;
+            background-color: green;
+            border-radius: 10px;
+            background-image: url(img1.png);
+            background-repeat: no-repeat;
+            background-size: 320px;
+            background-position: 15px 15px;
+        }
+
+        #card1 p {
+            margin-top: 80%;
+            text-align: center;
+            color: black;
+            font-weight: 700;
+        }
+
+        .main2 #card2 {
+            width: 350px;
+            height: 400px;
+            background-color: aqua;
+            border-radius: 10px;
+            background-image: url(img1.png);
+            background-repeat: no-repeat;
+            background-size: 320px;
+            background-position: 15px 15px;
+        }
+
+        #card2 p {
+            margin-top: 80%;
+            text-align: center;
+            color: black;
+            font-weight: 700;
+        }
+
+        .main2 #card3 {
+            width: 350px;
+            height: 400px;
+            background-color: orange;
+            border-radius: 10px;
+            background-image: url(img1.png);
+            background-repeat: no-repeat;
+            background-size: 320px;
+            background-position: 15px 15px;
+        }
+
+        #card3 p {
+            margin-top: 80%;
+            text-align: center;
+            color: black;
+            font-weight: 700;
+        }
+
+        .main3 {
+            margin: 20px 0;
+            width: 1335px;
+            height: 600px;
+            /* align-items: center;
+            justify-content: center; */
+            background-color: whitesmoke;
+            padding: 20px;
+        }
+
+        .main3 p {
+            font-size: 20px;
+        }
+
+        .about {
+            width: 1280px;
+            height: 300px;
+            padding: 10PX;
+            background-color: gray;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 1024px) {
+            #nav {
+                width: 1008px;
+            }
+
+            #nav a:hover {
+                color: black;
+                background-color: white;
+                height: 25px;
+                padding: 4px;
+                transition: 0.8s;
+            }
+
+            #search {
+                font-size: 15px;
+                margin-left: 430px;
+            }
+
+            #chat_box {
+                margin-top: 10px;
+                width: 1008px;
+                height: 700px;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+                        rgba(0, 0, 0, 0.5)), url('img1.png');
+                background-repeat: no-repeat;
+                /* position: fixed; */
+                align-items: center;
+                display: flex;
+                justify-content: center;
+
+            }
+
+            #box {
+                height: 280px;
+                width: 180px;
+                border: 2px solid black;
+                border-radius: 10px;
+                margin-left: 790px;
+                position: fixed;
+                background-color: gray;
+            }
+
+            #chat_inp {
+                font-size: 14.1px;
+                margin-top: 130%;
+                /* margin-left: 10px; */
+            }
+
+            .main1 h1 {
+                color: orange;
+                margin-top: 300px;
+                margin-bottom: 10px;
+                font-size: 40px;
+            }
+
+            .main1 .btn {
+                padding-top: 8px;
+                text-align: center;
+                width: 140px;
+                height: 25px;
+                position: relative;
+                left: 2%;
+                color: whitesmoke;
+                background-color: black;
+                /* border-radius: 10px; */
+                margin-bottom: 300px;
+                margin-top: 0px;
+            }
+
+            .main1 .btn:hover {
+                /* align-items: center; */
+                color: black;
+                background-color: whitesmoke;
+                transition: 0.8;
+                /* border-radius: 10px; */
+                margin-bottom: 300px;
+                margin-top: 0px;
+            }
+
+            .main2 {
+                margin: 20px 0;
+                width: 1008px;
+                height: 600px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                column-gap: 20px;
+                background-color: whitesmoke;
+            }
+
+            .main2 #card1 {
+                width: 300px;
+                height: 350px;
+                background-color: green;
+                border-radius: 10px;
+                background-image: url(img1.png);
+                background-repeat: no-repeat;
+                background-size: 270px;
+                background-position: 15px 15px;
+            }
+
+            .main2 #card2 {
+                width: 300px;
+                height: 350px;
+                background-color: aqua;
+                border-radius: 10px;
+                background-image: url(img1.png);
+                background-repeat: no-repeat;
+                background-size: 270px;
+                background-position: 15px 15px;
+            }
+
+            .main2 #card3 {
+                width: 300px;
+                height: 350px;
+                background-color: orange;
+                border-radius: 10px;
+                background-image: url(img1.png);
+                background-repeat: no-repeat;
+                background-size: 270px;
+                background-position: 15px 15px;
+            }
+
+            .main3 {
+                margin: 20px 0;
+                width: 968px;
+                height: 560px;
+                /* display: flex; */
+                align-items: center;
+                justify-content: center;
+                /* column-gap: 20px; */
+                background-color: whitesmoke;
+                padding: 20px;
+            }
+
+            .main3 p {
+                font-size: 20px;
+            }
+
+            .about {
+                width: 950px;
+                height: 350px;
+                padding: 10px;
+                background-color: gray;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+
+            #nav {
+                width: 996px;
+            }
+
+            #nav a:hover {
+                color: black;
+                background-color: white;
+                height: 25px;
+                padding: 4px;
+                transition: 0.8s;
+            }
+
+            #search {
+                font-size: 15px;
+                margin-left: 420px;
+            }
+
+            #chat_box {
+                margin-top: 10px;
+                width: 996px;
+                height: 700px;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+                        rgba(0, 0, 0, 0.5)), url('img1.png');
+                background-repeat: no-repeat;
+                /* position: fixed; */
+                align-items: center;
+                display: flex;
+                justify-content: center;
+
+            }
+
+            #box {
+                height: 300px;
+                width: 200px;
+                border: 2px solid black;
+                border-radius: 10px;
+                margin-left: 780px;
+                position: fixed;
+                background-color: gray;
+            }
+
+            .main2 {
+                margin: 20px 0;
+                width: 996px;
+                height: 600px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                column-gap: 20px;
+                background-color: whitesmoke;
+            }
+
+            .main3 {
+                margin: 20px 0;
+                width: 955px;
+                height: 560px;
+                /* display: flex; */
+                align-items: center;
+                justify-content: center;
+                /* column-gap: 20px; */
+                background-color: whitesmoke;
+                padding: 20px;
+            }
+        }
+
+        @media screen and (max-width: 425px) {
+            #search {
+                display: none;
+            }
+
+            a {
+                font-size: 18px;
+                margin: 10px 18px;
+                padding: 4px;
+                text-align: center;
+                /* background-color: black; */
+                /* display: inline-block; */
+                text-decoration: none;
+                color: white;
+            }
+
+            a:hover {
+                color: black;
+                background-color: white;
+                height: 25px;
+                padding: 4px;
+                transition: 0.8s;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Visited</a>
+        <a href="#">Contact us</a>
+        <input type="search" id="search" placeholder="Search">
+    </div>
+
+    <div id="chat_box">
+        <div id="box">
+            <input type="search" id="chat_inp" placeholder="Type your question here..">
+        </div>
+        <div class="main1">
+            <h1>Govardhan Institute</h1>
+            <a href="#" class="btn">Sign in</a>
+            <a href="#" class="btn">Sign up</a>
+        </div>
+    </div>
+    <div class="main2">
+        <div id="card1">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quia voluptas magni ut eius nulla
+                suscipit.</p>
+        </div>
+        <div id="card2">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quia voluptas magni ut eius nulla
+                suscipit.</p>
+        </div>
+        <div id="card3">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quia voluptas magni ut eius nulla
+                suscipit.</p>
+        </div>
+    </div>
+    <div class="main3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatem, adipisci possimus illum iure
+            saepe hic, ipsam sit porro aperiam excepturi repellendus. Doloribus ducimus earum repudiandae ea nemo ipsum
+            pariatur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatem, adipisci possimus illum iure
+            saepe hic, ipsam sit porro aperiam excepturi repellendus. Doloribus ducimus earum repudiandae ea nemo ipsum
+            pariatur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatem, adipisci possimus illum iure
+            saepe hic, ipsam sit porro aperiam excepturi repellendus. Doloribus ducimus earum repudiandae ea nemo ipsum
+            pariatur.</p>
+        <div class="about">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatem, adipisci possimus illum iure
+                saepe hic.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatem, adipisci possimus illum iure
+                saepe.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatem, adipisci possimus illum iure.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatem, adipisci possimus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptate abcdefghijk.</p>
+
+            <h1>THANK YOU</h1>
+
+        </div>
+    </div>
+</body>
+
+</html>

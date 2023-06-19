@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            padding: 10px;
+        }
+        #t1 {
+            background-color: blue;
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            margin: 50px 50px;
+            z-index: 3;
+            position: relative;
+        }
+        #t2 {
+            background-color: red;
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            margin: -65px 130px;
+            z-index: 2;
+            position: relative;
+        }
+        #t3 {
+            background-color: green;
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            margin: 50px 210px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="t1">
+        <h1>Blue</h1>
+    </div>
+    <div id="t2">
+        <h1>Red</h1>
+    </div>
+    <div id="t3">
+        <h1>Green</h1>
+    </div>
+</body>
+</html>

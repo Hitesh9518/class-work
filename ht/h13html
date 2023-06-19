@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nav {
+            background-color: gray;
+            height: 50px;
+            /* margin: 0; */
+        }
+
+        #menu li{
+            display: inline-block;
+            margin-top: 10px;
+            /* border: 2px solid white; */
+            padding: 5px;
+        }
+
+        a{
+            text-decoration: none;
+            padding: 15px;
+        }
+
+        #menu li:hover{
+            background-color: aqua;
+            color: black;
+            transition: 0.8s;
+        }
+
+        #menu li a:hover{
+            color: black;
+        }
+
+        #contact{
+            display: none;
+        }
+
+        /* #menu li #contact:hover{
+            display: block;
+        } */
+
+        #menu li:hover #contact{
+            display: block;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- <div>
+        <ol reversed start="a">
+            <li>abc</li>
+            <li>abcd</li>
+        </ol>
+    </div>
+    <div>
+        <ul>
+            <li>abc</li>
+            <li>abc</li>
+            <li>abc</li>
+        </ul>
+    </div> -->
+
+    <div id="nav">
+        <ul id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Visited</a></li>
+            <li><a href="#">Contact us</a>
+                <ul id="contact">
+                    <li><a href="#">Contact 1</a></li>
+                    <li><a href="#">Contact 2</a></li>
+                    <li><a href="#">Contact 3</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
